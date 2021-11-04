@@ -11,5 +11,4 @@ RewriteCond %{SCRIPT_FILENAME} !-f
 # Reglas de escritura
 RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
 
-
 </IfModule>

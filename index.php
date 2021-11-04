@@ -1,7 +1,6 @@
 
 <?php
 //Inicio la sesion
-ob_start();
 session_start();
 
 //Cargar el autoload 
@@ -37,12 +36,11 @@ if(class_exists($nombre_controlador)) {
     $controlador = new $nombre_controlador();  
 
     // Compruebo que hay parametro pasado y que existe la accion como metodo
-    if(isset($_GET['action'])&& method_exists($controlador, $_GET['action']) ) {
+    if(isset($_GET['action']) && method_exists($controlador, $_GET['action'])){
         $action = $_GET['action'];
         $controlador->$action();
-    
     } elseif(!isset($_GET['controller']) && !isset($_GET['action'])){
-       $default = action_default;
+       $action_default = action_default;
        $controlador->$action_default();
     
     } else {
@@ -51,6 +49,5 @@ if(class_exists($nombre_controlador)) {
 } else {
     show_error();
 }
-
 
 require_once 'views/layout/footer.php';
