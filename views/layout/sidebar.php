@@ -27,7 +27,7 @@
                         <!-- Mostrar solo si el user es admin -->
                         <?php if(isset($_SESSION['admin'])): ?>                            
                             <li><a href="<?=base_url?>categoria/index">Gestionar categorias</a></li>
-                            <li><a href="#">Gestionar productos</a></li>
+                            <li><a href="<?=base_url?>producto/gestion">Gestionar productos</a></li>
                             <li><a href="#">Gestionar pedidos</a></li>
                         <?php endif; ?>
 
