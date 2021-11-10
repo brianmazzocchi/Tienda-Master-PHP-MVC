@@ -338,7 +338,7 @@ button{
 #detail-product img{
     display: block;
     width: 100%;
-    float:left;
+    float:left;    
 }
 
 #detail-product .data{
@@ -392,7 +392,7 @@ button{
 }
 
 .total-carrito{
-   width: 295px;
+   width: 320px;
    float: right; 
 }
 
